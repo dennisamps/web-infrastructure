@@ -12,11 +12,3 @@ provider "aws" {
   profile = var.profile
 }
 
-terraform {
-  backend "s3" {
-    bucket = "terraform-backend-dennis-nginx-234"
-    region = "us-east-1"
-    key = "vpc/terraform.tfstate"
-  }
-  required_version = ">= 0.13"
-}

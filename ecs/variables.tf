@@ -23,3 +23,13 @@ variable "instance-type" {
   type = string
   
 }
+
+
+variable "zone_name" {
+  type = string
+}
+
+variable "a-record-domain-name" {
+  type = string
+}
+

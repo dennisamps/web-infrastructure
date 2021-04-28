@@ -1,7 +1,7 @@
 [
   {
     "name": "nginx",
-    "image": "nginx:latest",
+    "image": "dennisamps/dennis-nginx:latest",
     "memory": 300,
     "portMappings": [
       {
@@ -9,6 +9,16 @@
         "hostPort": 0
       }
     ],
+
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "secretOptions": null,
+      "options": {
+        "awslogs-group": "${ecs-log-group}",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
 
     "mountPoints": [
       {
