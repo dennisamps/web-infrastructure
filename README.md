@@ -25,8 +25,32 @@ To connect to AWS run the commands below in your terminal:
 ```
 export AWS_ACCESS_KEY_ID=<your access key ID>
 export AWS_SECRET_ACCESS_Key=<you secrect access key>
+```
+
+or if you have the credentials and profile already set up you can just export the profile:
 
 ```
+export AWS_PROFILE=<name of profile>
+```
+
+Now you can clone this git repo.
+
+### S3
+
+First you need to set up an S3 bucket to be the backend, this is where the remote state files will be stored. Navigate to the **S3 folder**.
+
+Pay attention to the variables in `terraform.tfvars` and `provider.tf` files.
+
+The variables that need to be changed are summarised in the table below:
+
+| Variable    | File Name   | Notes       |
+| ----------- | ----------- | ----------- |
+| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
+| bucket-name   | terraform.tfvars & provider.tf | The bucket name has to be globally unique|
+
+
+In the `terraform.tfvars` file the **region** variable needs to be changed to the region that is being used. In the 
+
 
 
 
