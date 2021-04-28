@@ -48,7 +48,7 @@ The variables that need to be changed are summarised in the table below:
 | Variable    | File Name   | Notes       |
 | ----------- | ----------- | ----------- |
 | region      | terraform.tfvars| Enter the region you want to deploy infrastructure to|
-| bucket-name   | terraform.tfvars & provider.tf | The bucket name has to be globally unique|
+| bucket-name   | terraform.tfvars | The bucket name has to be globally unique|
 
 Commands to apply once the updates are completed:
 
@@ -88,6 +88,7 @@ Update the following variables if required:
 | ----------- | ----------- | ----------- |
 | region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
 | bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage|
+| cidr_base      | terraform.tfvars| change this is you want a different cidr range|
 
 Commands to apply once the updates are completed:
 
