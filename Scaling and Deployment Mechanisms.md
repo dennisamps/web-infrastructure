@@ -14,7 +14,7 @@ In production a deployment pipeline can be set up using CI tools such as Jenkins
 
 A diagram of a possible pipeline is shown below:
 
-![pipeline](pipeline-diagram.jpg)
+![pipeline](deployment-pipeline-diagram.jpg)
 
 The file buildspec.yml file along with all the application files will be uploaded to s3. 
 
