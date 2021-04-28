@@ -22,11 +22,11 @@ Below are the sequence of steps required to deploy this project.
 
 To connect to AWS run the commands below in your terminal:
 
-...
+```
 export AWS_ACCESS_KEY_ID=<your access key ID>
 export AWS_SECRET_ACCESS_Key=<you secrect access key>
-...
 
+```
 
 
 
