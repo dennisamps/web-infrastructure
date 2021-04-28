@@ -12,7 +12,7 @@ To be able to spin up this terraform projects you will require:
 
 This infrastructure is deployed using ECS (EC2 service), with autoscaling of the containers and the instance host. CloudWatch monitoring has also been configured and is stored in S3. The topoplogy diagram for this infrastructure can be found here:
 
-[Web Hosting Architecture]
+[Web Hosting Architecture](network-diagram.jpg)
 
 ## How to deploy
 
@@ -45,19 +45,78 @@ The variables that need to be changed are summarised in the table below:
 
 | Variable    | File Name   | Notes       |
 | ----------- | ----------- | ----------- |
-| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
+| region      | terraform.tfvars| Enter the region you want to deploy infrastructure to|
 | bucket-name   | terraform.tfvars & provider.tf | The bucket name has to be globally unique|
 
+Commands to apply once the updates are completed:
 
-In the `terraform.tfvars` file the **region** variable needs to be changed to the region that is being used. In the 
+```
+terraform init
+terraform plan --out plan
+terraform apply plan
+```
+
+### ACM (Amazon Certificate Manager)
+
+Naviage to the ** acm ** folder.
+
+First you need to apply changes to some variables to create an AWS certificate to allow HTTPS encryption-in-flight. The variables that need updating is summarised in the table below:
+
+| Variable    | File Name   | Notes       |
+| ----------- | ----------- | ----------- |
+| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
+| zone_name      | terraform.tfvars| This should be you domain stored in Route 53 e.g. example.com|
+| bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage|
+
+Commands to apply once the updates are completed:
+
+```
+terraform init
+terraform plan --out plan
+terraform apply plan
+```
+
+### VPC 
+
+Naviage to the ** vpc ** folder.
+
+Update the following variables if required:
+
+| Variable    | File Name   | Notes       |
+| ----------- | ----------- | ----------- |
+| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
+| bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage|
+
+Commands to apply once the updates are completed:
+
+```
+terraform init
+terraform plan --out plan
+terraform apply plan
+```
+
+### ECS 
+
+Naviage to the ** ecs ** folder.
+
+Update the following variables if required:
+
+| Variable    | File Name   | Notes       |
+| ----------- | ----------- | ----------- |
+| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
+| bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage|
+| ami  | terraform.tfvars | The ami ID for the ecs instance image for your specified region|
+| instance-type  | terraform.tfvars | t2-micro is sufficeint for this proof of concept|
+| zone_name  | terraform.tfvars | This should be you domain stored in Route 53 e.g. example.com|
+| a-record-domain-name  | terraform.tfvars | the subdomain you want people to access you rsite through e.g. dennis.example.com|
+
+Commands to apply once the updates are completed:
+
+```
+terraform init
+terraform plan --out plan
+terraform apply plan
+```
 
 
 
-
-
-You have been asked to create a website for a modern company that has recently migrated
-their entire infrastructure to AWS. They want you to demonstrate a basic website with some text
-and an image, hosted and managed using modern standards and practices in AWS.
-You can create your own application, or use open source or community software. The proof of
-concept is to demonstrate hosting, managing, and scaling an enterprise-ready system. This is
-not about website content or UI.
