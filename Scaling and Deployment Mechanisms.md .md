@@ -8,6 +8,11 @@ This means that should the traffic hitting the website increase more instances a
 
 # Deployment
 
-In this solution a custom image stored in DockerHub was used for the task definition.  In production a deployment pipeline can be set up using CI tools such as Jenkins or CodePipeline. A diagram of a possible pipeline is shown below:
+In this solution a custom image stored in DockerHub was used for the task definition.  In production a deployment pipeline can be set up using CI tools such as Jenkins or CodePipeline. 
+A diagram of a possible pipeline is shown below:
 
-![pipeline](network-diagram.jpg)
+![pipeline](pipeline-diagram.jpg)
+
+The file buildspec.yml file along with all the application files will be uploaded to s3. When a new file is uploaded this will trigger a CodeBuild project to start in CodePipeline. 
+
+The CodeBuild project will build a new docker image and store it in ECR. The image will then be referenced in the task definition in ECS.
