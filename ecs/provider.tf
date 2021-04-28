@@ -13,7 +13,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-backend-dennis-nginx-234"
+    bucket = "terraform-backend-dennis-nginx-2345"
     region = "us-east-1"
     key = "ecs/terraform.tfstate"
   }
