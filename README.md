@@ -58,7 +58,7 @@ terraform apply plan
 
 ### ACM (Amazon Certificate Manager)
 
-Naviage to the ** acm ** folder.
+Naviage to the **acm** folder.
 
 First you need to apply changes to some variables to create an AWS certificate to allow HTTPS encryption-in-flight. The variables that need updating is summarised in the table below:
 
@@ -78,7 +78,7 @@ terraform apply plan
 
 ### VPC 
 
-Naviage to the ** vpc ** folder.
+Naviage to the **vpc** folder.
 
 Update the following variables if required:
 
@@ -97,7 +97,7 @@ terraform apply plan
 
 ### ECS 
 
-Naviage to the ** ecs ** folder.
+Naviage to the **ecs** folder.
 
 Update the following variables if required:
 
