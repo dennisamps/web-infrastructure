@@ -1,16 +1,16 @@
 # Web Hosting Infrastructure
 
-This is a proof of concept, automating the provisioning of infrastructure for managing, hosting and scaling an enterprise ready application and system, using Infrastructue as Code. 
+This is a proof of concept, automating the provisioning of infrastructure for managing, hosting and scaling an enterprise ready application and system, using Infrastructure as Code. 
 
 ## **Requirements**
 
-To be able to spin up this terraform projects you will require:
+To be able to spin up this terraform project you will require:
 * AWS account
 * Hosted zone / domain in Route 53 (e.g. example.co.uk)
 
 ## Infrastructure as Code (Terraform)
 
-This infrastructure is deployed using ECS (EC2 service), with autoscaling of the containers and the instance host. CloudWatch monitoring has also been configured and is stored in S3. The topoplogy diagram for this infrastructure can be found here:
+This infrastructure is deployed using ECS (EC2 service), with autoscaling of the containers and the instance host. CloudWatch monitoring has also been configured and is stored in S3. The topology diagram for this infrastructure can be found here:
 
 [Web Hosting Architecture](network-diagram.jpg)
 
@@ -37,7 +37,9 @@ Now you can clone this git repo.
 
 ### S3
 
-First you need to set up an S3 bucket to be the backend, this is where the remote state files will be stored. Navigate to the **S3 folder**.
+Navigate to the **S3 folder**.
+
+First you need to set up an S3 bucket to be the backend, this is where the remote state files will be stored. 
 
 Pay attention to the variables in `terraform.tfvars` and `provider.tf` files.
 
