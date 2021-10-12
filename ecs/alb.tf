@@ -20,18 +20,6 @@ resource "aws_lb_target_group" "ECS_TG" {
 }
 
 
-
-# resource "aws_lb_listener" "http_listener" {
-#   load_balancer_arn = aws_lb.main-lb.id
-#   port              = "80"
-#   protocol          = "HTTP"
-
-#   default_action {
-#     type             = "forward"
-#     target_group_arn = aws_lb_target_group.ECS_TG.id
-#   }
-# }
-
 resource "aws_lb_listener" "http_listener" {
   load_balancer_arn = aws_lb.main-lb.id
   port              = "80"
