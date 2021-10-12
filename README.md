@@ -10,7 +10,7 @@ To be able to spin up this terraform project you will require:
 
 ## Infrastructure as Code (Terraform)
 
-This infrastructure is deployed using ECS (EC2 service), with autoscaling of the containers and the instance host. CloudWatch monitoring has also been configured and is stored in S3. The topology diagram for this infrastructure can be found here:
+This infrastructure is deployed using ECS (Elastic Container Service), with autoscaling of the containers and the instance host. CloudWatch monitoring has also been configured and is stored in S3. The topology diagram for this infrastructure can be found here:
 
 [Web Hosting Architecture](network-diagram.jpg)
 
