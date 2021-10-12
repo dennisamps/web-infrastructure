@@ -18,25 +18,3 @@ resource "aws_s3_bucket" "backend" {
   }
 }
 
-# resource "aws_s3_bucket_policy" "backend" {
-#   bucket = aws_s3_bucket.backend.id
-
-
-#   policy = jsonencode({
-#   "Version": "2012-10-17",
-#   "Statement": [
-#     {
-#       "Effect": "Allow",
-#       "Principal": "*",
-#       "Action": "s3:ListBucket",
-#       "Resource": "arn:aws:s3:::terraform-backend-dennis-nginx"
-#     },
-#     {
-#       "Effect": "Allow",
-#       "Principal": "*",
-#       "Action": ["s3:GetObject", "s3:PutObject"],
-#       "Resource": "arn:aws:s3:::terraform-backend-dennis-nginx/state.tf"
-#     }
-#   ]
-# })
-# }
