@@ -47,8 +47,8 @@ The variables that need to be changed are summarised in the table below:
 
 | Variable    | File Name   | Notes       |
 | ----------- | ----------- | ----------- |
-| region      | terraform.tfvars| Enter the region you want to deploy infrastructure to|
-| bucket-name   | terraform.tfvars | The bucket name has to be globally unique|
+| region      | terraform.tfvars| Enter the region you want to deploy infrastructure to.|
+| bucket-name   | terraform.tfvars | The bucket name has to be globally unique.|
 
 Commands to apply once the updates are completed:
 
@@ -66,9 +66,9 @@ First you need to apply changes to some variables to create an AWS certificate t
 
 | Variable    | File Name   | Notes       |
 | ----------- | ----------- | ----------- |
-| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
-| zone_name      | terraform.tfvars| This should be you domain stored in Route 53 e.g. example.com|
-| bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage|
+| region      | terraform.tfvars| Enter the region you want to deploy infrastructure to.|
+| zone_name      | terraform.tfvars| This should be you domain stored in Route 53 e.g. example.com.|
+| bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage.|
 
 Commands to apply once the updates are completed:
 
@@ -86,9 +86,9 @@ Update the following variables if required:
 
 | Variable    | File Name   | Notes       |
 | ----------- | ----------- | ----------- |
-| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
-| bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage|
-| cidr_base      | terraform.tfvars| change this is you want a different cidr range|
+| region      | terraform.tfvars| Enter the region you want to deploy infrastructure to.|
+| bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage.|
+| cidr_base      | terraform.tfvars| Change this is you want a different cidr range.|
 
 Commands to apply once the updates are completed:
 
@@ -106,12 +106,12 @@ Update the following variables if required:
 
 | Variable    | File Name   | Notes       |
 | ----------- | ----------- | ----------- |
-| region      | terraform.tfvars| enter the region you want to deploy infrastructure to|
+| region      | terraform.tfvars| Enter the region you want to deploy infrastructure to.|
 | bucket   | provider.tf | The bucket name has to be globally unique, it should be the same one you set in the s3 stage|
-| ami  | terraform.tfvars | The ami ID for the ecs instance image for your specified region|
-| instance-type  | terraform.tfvars | t2-micro is sufficeint for this proof of concept|
-| zone_name  | terraform.tfvars | This should be you domain stored in Route 53 e.g. example.com|
-| a-record-domain-name  | terraform.tfvars | the subdomain you want people to access you rsite through e.g. dennis.example.com|
+| ami  | terraform.tfvars | The ami ID for the ecs instance image for your specified region.|
+| instance-type  | terraform.tfvars | T2-micro is sufficeint for this proof of concept.|
+| zone_name  | terraform.tfvars | This should be you domain stored in Route 53 e.g. example.com.|
+| a-record-domain-name  | terraform.tfvars | The subdomain you want people to access your site through e.g. dennis.example.com.|
 
 Commands to apply once the updates are completed:
 
