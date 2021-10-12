@@ -4,7 +4,7 @@ This solutions implements containers running on ECS instance to deliver the webs
 
 Autoscaling groups with capacity providers has been configured so that the number of containers and hence host instances will scale accordingly with CPU utilisation. 
 
-This means that should the traffic hitting the website increase more, instances and containers will be provisioned to ensure that the users can access the site.
+This means that should the traffic hitting the website increase, more instances and containers will be provisioned to ensure that the users can access the site.
 
 # Deployment
 
