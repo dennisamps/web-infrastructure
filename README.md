@@ -80,7 +80,7 @@ terraform apply plan
 
 ### VPC 
 
-Naviage to the **vpc** folder.
+Navigate to the **vpc** folder.
 
 Update the following variables if required:
 
